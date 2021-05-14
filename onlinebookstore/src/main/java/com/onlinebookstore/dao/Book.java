@@ -8,7 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.springframework.web.bind.annotation.Mapping;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -38,4 +42,8 @@ public class Book {
 	private Date createOn;
 	@Column(name = "last_updated")
 	private Date updateOn;
+	
+	@ManyToOne
+	@JoinColumn(name="category_id", nullable=false)
+	private BookCategory bookCategory;
 }
