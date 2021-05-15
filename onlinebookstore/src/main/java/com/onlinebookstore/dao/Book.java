@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.web.bind.annotation.Mapping;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -36,7 +34,7 @@ public class Book {
 	@Column(name = "img_url")
 	private String imageUrl;
 	private boolean active;
-	@Column(name = "units_in_stock)")
+	@Column(name = "units_in_stock")
 	private int unitsOfStock;
 	@Column(name = "date_created")
 	private Date createOn;
